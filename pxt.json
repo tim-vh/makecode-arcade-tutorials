@@ -9,7 +9,7 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "jingle-bells.md",
+        "docs/jingle-bells.md",
         "platform-game.md"
     ],
     "testFiles": [

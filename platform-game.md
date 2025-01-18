@@ -2,7 +2,9 @@
 
 ## Introductie @showdialog
 
-Tutorial om een platform game te maken.
+Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform game maakt. In het spel moet de speler de schat vinden, maar als die in de lava valt heeft de speler verloren. 
+
+![Platform game screenshot](./images/platform-game-screenshot.png)
 
 Gebaseerd op de video [How to Make a Platformer Game](https://www.youtube.com/watch?v=9bSX9Q5aP6E) van Microsoft MakeCode
 
@@ -11,13 +13,35 @@ Gebaseerd op de video [How to Make a Platformer Game](https://www.youtube.com/wa
 
 Voeg een blok toe om de achtergrond kleur van het spel te veranderen naar blauw. Dit blok is te vinden in de ``||scene:Scene||`` categorie.
 
+Voeg het blok ``||scene:set background color to []||`` toe aan ``||loops:on start||``. Door op het vakje achteraan het blok te klikken kun je een kleur kiezen.
+
+
+~hint Meer uitleg 🤷🏽
+
+Alles wat in het blok ``||loops:on start||`` staat wordt uitgevoerd als het spel opstart. Door het blok ``||scene:set background color to []||`` toe te voegen krijgt het spel een andere achtergrond kleur. 
+
+hint~
+
+
 ```blocks
 scene.setBackgroundColor(9)
 ```
 
+
 ## Sprite voor de speler toevoegen
 
-Voeg een sprite toe voor de speler. Als de sprite is toegevoegd willen we deze kunnen besturen met de pijltjestoetsen. 
+In deze stap gaan we een sprite toevoegen voor de speler. Als de sprite is toegevoegd willen we deze kunnen besturen met de pijltjestoetsen. 
+
+~hint Wat is een sprite? 🤷🏽
+
+Een sprite is een soort plaatje die je aan het spel toevoegd en die we daarna kunnen programmeren. We kunnen de sprite bijvoorbeeld laten bewegen door een spel. Een sprite kunnen we gebruiken voor bijvoorbeeld de speler of een vijand.
+
+hint~
+
+Voeg het blok ``||variables(sprites):set [mySprite] to sprite [ ] of kind [Player]||`` toe aan ``||loops:on start||``. Deze kan je vinden in de categorie ``||sprites:Sprites||`` 
+
+Voeg daarna het blok ``||contoller:move [mysprite] with buttons||`` toe.
+
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -46,11 +70,25 @@ controller.moveSprite(speler)
 
 Om een level met platforms te maken voegen we een tilemap toe aan ons spel.
 
-Voeg daarna tiles toe aan de tilemap die je hebt toegevoegd. Deze tiles gebruiken we als platforms waar de speler op kan springen.
+~hint Wat is een tilemap? 🤷🏽
+
+Een tilemap is een raster van tegels (tiles) die samen een spelwereld of level vormen. Elke tegel is een afbeelding die een de achtergrond, een platform, een muur of een ander onderdeel van het spel is.
+
+hint~
+
+Voeg het blok ``||scene:set tilemap to [tilemap]||`` toe aan het blok ``||loops:on start||``.
+
+Voeg daarna tiles toe aan de tilemap die je hebt toegevoegd. Dit kun je doen door op het witte vlak aan het einde van het blok te klikken. Deze tiles gebruiken we als platforms waar de speler op kan springen.
+
+![Platform game screenshot](./images/draw-tilemap.png)
 
 Om het spel te laten weten dat we op de platforms moeten kunnen staan geven we in de tilemap editor aan dat het 'walls' of 'muren' zijn.
 
+![Platform game screenshot](./images/draw-tilemap-walls.png)
+
 Om ervoor te zorgen dat we door het hele level kunnen bewegen willen we er voor zorgen dat de camera meebeweegt met de speler.
+
+Dit kunnen we doen door het blok ``||scene:camera follow sprite [mysrpite]||`` toe te voegen aan ``||loops:on start||``.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -81,7 +119,15 @@ scene.cameraFollowSprite(speler)
 
 ## Zwaartekracht
 
-Om de speler naar beneden te laten vallen voegen we een y-acceleration toe van 350.
+De speler kan nu door het gemaakt level bewegen. Maar om ervoor te zorgen dat de speler naar beneden valt en op de platforms kan springen willen we zwaartekracht toevoegen.
+
+Om dit te doen voegen we het blok ``||sprites:set [mysprite] [x] to [0]||`` toe aan het blok ``||loops:on start||``. Verander de 'x' naar 'y-acceleration' en de '0' naar '350'.
+
+~hint Meer uitleg 🤷🏽
+
+Met 'y-acceleration' stellen we in dat het spel de y snelheid steeds probeert te vehogen. De y staat voor de verticale richting (van boven naar beneden). Doordat die snelheid steed hoger wordt vallen we naar beneden totdat we ergens tegenaan botsen. Bijvoorbeeld een platform.
+
+hint~
 
 ```blocks
 scene.setBackgroundColor(9)

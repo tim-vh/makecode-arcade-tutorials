@@ -4,8 +4,6 @@
 
 Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform game maakt. In het spel moet de speler de schat vinden, maar als die in de lava valt heeft de speler verloren. 
 
-Gebaseerd op de video [How to Make a Platformer Game](https://www.youtube.com/watch?v=9bSX9Q5aP6E) van Microsoft MakeCode
-
 
 ## Achtergrond kleur instellen
 

@@ -7,7 +7,7 @@ Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform ga
 
 ## Achtergrond kleur instellen
 
-Voeg een blok toe om de achtergrond kleur van het spel te veranderen naar blauw. Dit blok is te vinden in de ``||scene:Scene||`` categorie.
+Voeg een blok toe om de achtergrondkleur van het spel te veranderen naar blauw. Dit blok is te vinden in de ``||scene:Scene||`` categorie.
 
 Voeg het blok ``||scene:set background color to []||`` toe aan ``||loops:on start||``. Door op het vakje achteraan het blok te klikken kun je een kleur kiezen.
 
@@ -30,7 +30,7 @@ In deze stap gaan we een sprite toevoegen voor de speler. Als de sprite is toege
 
 ~hint Wat is een sprite? 🤷🏽
 
-Een sprite is een soort plaatje die je aan het spel toevoegd en die we daarna kunnen programmeren. We kunnen de sprite bijvoorbeeld laten bewegen door een spel. Een sprite kunnen we gebruiken voor bijvoorbeeld de speler of een vijand.
+Een sprite is een soort plaatje die je aan het spel toevoegd en die we daarna kunnen programmeren. We kunnen de sprite bijvoorbeeld laten bewegen door het spel. Een sprite kunnen we gebruiken voor bijvoorbeeld de speler, een vijand of muntjes die je moet verzamelen.
 
 hint~
 
@@ -150,9 +150,9 @@ speler.ay = 350
 
 ## Springen
 
-Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt. Voeg hiervoor een ``||controller: on [A] button [pressed]||`` blok toe met daarin het blok ``||set [mysprite] [x] to [0]. Verander de waardes in dit blok naar 'velocity y' en '-150'.
+Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt. Voeg hiervoor een ``||controller: on [A] button [pressed]||`` blok toe met daarin het blok ``||set [mysprite] [x] to [0]||``. Verander de waardes in dit blok naar 'velocity y' en '-150'.
 
-Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan met een ``||logic:if [true] then||`` blok met daarin ``||logic:[mysprite][]vy (velocity y) = [0]||``.
+Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan met een ``||logic:if [true] then||`` blok met daarin ``||logic:[mysprite][vy (velocity y)] = [0]||``.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -191,7 +191,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Om de speler te laten verliezen als deze van een platform afvalt kunnen we het level aanpassen door onderin het level bijvoorbeeld lava tiles toe te voegen.
 
-Wanneer de speler deze raakt is het spel afgelopen en heeft die verloren. Dit kan met een ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Verander de waarde 'lose' naar 'lose'.
+Wanneer de speler deze raakt is het spel afgelopen en heeft die verloren. Dit kan met een ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Verander de waarde van dit blok naar 'lose'.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -226,9 +226,9 @@ scene.onOverlapTile(SpriteKind.Player, lava, function (sprite, location) {
 
 ## Winnen
 
-Om de speler te laten winnen plaatsen we aan het einde van het level een chest (kist). Wanneer de speler deze raakt heeft die het spel uitgespeeld.
+Om de speler te laten winnen plaatsen we aan het einde van het level een kist (chest). Wanneer de speler deze raakt heeft die het spel uitgespeeld.
 
-Wanneer de speler deze raakt is heeft de speler gewonnen. Ook dit kan weer met de blokken ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Zet de waarde nu op 'win'.
+Ook dit kan weer met de blokken ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Zet de waarde nu op 'win'.
 
 ```blocks
 scene.setBackgroundColor(9)

@@ -111,7 +111,7 @@ scene.cameraFollowSprite(speler)
 
 ## Zwaartekracht
 
-De speler kan nu door het gemaakt level bewegen. Maar om ervoor te zorgen dat de speler naar beneden valt en op de platforms kan springen willen we zwaartekracht toevoegen.
+De speler kan nu door het gemaakte level bewegen. Maar om ervoor te zorgen dat de speler naar beneden valt en op de platforms kan springen willen we zwaartekracht toevoegen.
 
 Om dit te doen voegen we het blok ``||sprites:set [mysprite] [x] to [0]||`` toe aan het blok ``||loops:on start||``. Verander de 'x' naar 'y-acceleration' en de '0' naar '350'.
 
@@ -150,9 +150,9 @@ speler.ay = 350
 
 ## Springen
 
-We kunnen de speler laten springen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt.
+Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt. Voeg hiervoor een ``||controller: on [A] button [pressed]||`` blok toe met daarin het blok ``||set [mysprite] [x] to [0]. Verander de waardes in dit blok naar 'velocity y' en '-150'.
 
-Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is.
+Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan met een ``||logic:if [true] then||`` blok met daarin ``||logic:[mysprite][]vy (velocity y) = [0]||``.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -191,7 +191,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 
 Om de speler te laten verliezen als deze van een platform afvalt kunnen we het level aanpassen door onderin het level bijvoorbeeld lava tiles toe te voegen.
 
-Wanneer de speler deze raakt is het spel afgelopen en heeft die verloren.
+Wanneer de speler deze raakt is het spel afgelopen en heeft die verloren. Dit kan met een ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Verander de waarde 'lose' naar 'lose'.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -227,6 +227,8 @@ scene.onOverlapTile(SpriteKind.Player, lava, function (sprite, location) {
 ## Winnen
 
 Om de speler te laten winnen plaatsen we aan het einde van het level een chest (kist). Wanneer de speler deze raakt heeft die het spel uitgespeeld.
+
+Wanneer de speler deze raakt is heeft de speler gewonnen. Ook dit kan weer met de blokken ``||scene: on [sprite] of kind [player] overlaps [] at [location]||`` en ``||game:game over [win]||`` blok. Zet de waarde nu op 'win'.
 
 ```blocks
 scene.setBackgroundColor(9)

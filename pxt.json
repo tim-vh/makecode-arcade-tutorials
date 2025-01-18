@@ -10,10 +10,7 @@
         "README.md",
         "assets.json",
         "jingle-bells.md",
-        "platform-game.md",
-        "images/platform-game-screenshot.png",
-        "images/draw-tilemap.png",
-        "images/draw-tilemap-walls.png"
+        "platform-game.md"
     ],
     "testFiles": [
         "test.ts"

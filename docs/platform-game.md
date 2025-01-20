@@ -4,9 +4,9 @@
 
 Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform game maakt. In het spel moet de speler de schat vinden, maar als die in de lava valt heeft de speler verloren. 
 
-![Platform game screenshot](static/images/platform-game-screenshot.png)
+![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/platform-game-screenshot.png)
 
-(version: 1.12.60)
+(version: 1.12.61)
 
 
 ## Achtergrond kleur instellen

@@ -6,7 +6,9 @@ Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform ga
 
 ![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/platform-game-screenshot.png)
 
-(version: 1.12.61)
+Gebaseerd op de video [How to Make a Platformer Game](https://www.youtube.com/watch?v=9bSX9Q5aP6E) van Microsoft MakeCode
+
+Versie: 1.12.61
 
 
 ## Achtergrond kleur instellen
@@ -80,7 +82,11 @@ Voeg het blok ``||scene:set tilemap to [tilemap]||`` toe aan het blok ``||loops:
 
 Voeg daarna tiles toe aan de tilemap die je hebt toegevoegd. Dit kun je doen door op het witte vlak aan het einde van het blok te klikken. Deze tiles gebruiken we als platforms waar de speler op kan springen.
 
+![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap.png)
+
 Om het spel te laten weten dat we op de platforms moeten kunnen staan geven we in de tilemap editor aan dat het 'walls' of 'muren' zijn.
+
+![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap-walls.png)
 
 Om ervoor te zorgen dat we door het hele level kunnen bewegen willen we er voor zorgen dat de camera meebeweegt met de speler.
 

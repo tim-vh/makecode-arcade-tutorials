@@ -174,7 +174,7 @@ Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen 
 
 Nu moeten we de functie uitvoeren wanneer er op de A knop wordt gedrukt. Gebruik hiervoor de volgende code: ``controller.A.on_event(ControllerButtonEvent.PRESSED, spring)``.
 
-Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan door de code  ``logic:if speler.vy == 0:`` toe te voegen aan de spring functie.
+Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan door de code  ``if speler.vy == 0:`` toe te voegen aan de spring functie.
 
 ```python
 scene.set_background_color(9)

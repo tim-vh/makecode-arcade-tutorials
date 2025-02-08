@@ -81,10 +81,8 @@ hint~
 Voeg het blok ``||scene:set tilemap to [tilemap]||`` toe aan het blok ``||loops:on start||``.
 
 Voeg daarna tiles toe aan de tilemap die je hebt toegevoegd. Dit kun je doen door op het witte vlak aan het einde van het blok te klikken. Deze tiles gebruiken we als platforms waar de speler op kan springen.
-![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap.png)
 
 Om het spel te laten weten dat we op de platforms moeten kunnen staan geven we in de tilemap editor aan dat het 'walls' of 'muren' zijn.
-![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap-walls.png)
 
 Om ervoor te zorgen dat we door het hele level kunnen bewegen willen we er voor zorgen dat de camera meebeweegt met de speler. Dit kunnen we doen door het blok ``||scene:camera follow sprite [mysrpite]||`` toe te voegen aan ``||loops:on start||``.
 

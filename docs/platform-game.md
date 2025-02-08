@@ -81,16 +81,13 @@ hint~
 Voeg het blok ``||scene:set tilemap to [tilemap]||`` toe aan het blok ``||loops:on start||``.
 
 Voeg daarna tiles toe aan de tilemap die je hebt toegevoegd. Dit kun je doen door op het witte vlak aan het einde van het blok te klikken. Deze tiles gebruiken we als platforms waar de speler op kan springen.
-
 ![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap.png)
 
 Om het spel te laten weten dat we op de platforms moeten kunnen staan geven we in de tilemap editor aan dat het 'walls' of 'muren' zijn.
-
 ![Platform game screenshot](https://raw.githubusercontent.com/tim-vh/makecode-arcade-tutorials/master/docs/static/images/draw-tilemap-walls.png)
 
-Om ervoor te zorgen dat we door het hele level kunnen bewegen willen we er voor zorgen dat de camera meebeweegt met de speler.
+Om ervoor te zorgen dat we door het hele level kunnen bewegen willen we er voor zorgen dat de camera meebeweegt met de speler. Dit kunnen we doen door het blok ``||scene:camera follow sprite [mysrpite]||`` toe te voegen aan ``||loops:on start||``.
 
-Dit kunnen we doen door het blok ``||scene:camera follow sprite [mysrpite]||`` toe te voegen aan ``||loops:on start||``.
 
 ```blocks
 scene.setBackgroundColor(9)
@@ -127,7 +124,7 @@ Om dit te doen voegen we het blok ``||sprites:set [mysprite] [x] to [0]||`` toe 
 
 ~hint Meer uitleg 🤷🏽
 
-Met 'y-acceleration' stellen we in dat het spel de y snelheid steeds probeert te vehogen. De y staat voor de verticale richting (van boven naar beneden). Doordat die snelheid steed hoger wordt vallen we naar beneden totdat we ergens tegenaan botsen. Bijvoorbeeld een platform.
+Met 'y-acceleration' stellen we in dat het spel de y snelheid steeds probeert te vehogen. De y staat voor de verticale richting (van boven naar beneden). Doordat die snelheid steeds hoger wordt vallen we naar beneden totdat we ergens tegenaan botsen. Bijvoorbeeld een platform.
 
 hint~
 
@@ -160,7 +157,7 @@ speler.ay = 350
 
 ## Springen
 
-Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt. Voeg hiervoor een ``||controller: on [A] button [pressed]||`` blok toe met daarin het blok ``||set [mysprite] [x] to [0]||``. Verander de waardes in dit blok naar 'velocity y' en '-150'.
+Als volgende stap willen we de speler kunnen laten springen. Dat kunnen we doen door de y-snelheid van de speler in te stellen op -150 als er op de a knop wordt gedrukt. Voeg hiervoor een ``||controller: on [A] button [pressed]||`` blok toe met daarin het blok ``||sprites:set [mysprite] [x] to [0]||``. Verander de waardes in dit blok naar 'velocity y' en '-150'.
 
 Om ervoor te zorgen dat we niet in de lucht kunnen springen willen we de y-snelheid alleen veranderen als deze op dat moment 0 is. Dit kan met een ``||logic:if [true] then||`` blok met daarin ``||logic:[mysprite][vy (velocity y)] = [0]||``.
 

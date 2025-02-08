@@ -10,13 +10,14 @@
         "README.md",
         "assets.json",
         "docs/jingle-bells.md",
-        "docs/platform-game.md"
+        "docs/platform-game.md",
+        "platform-game-python.md"
     ],
     "testFiles": [
         "test.ts"
     ],
     "targetVersions": {
-        "target": "1.12.61",
+        "target": "1.12.62",
         "targetId": "arcade"
     },
     "supportedTargets": [

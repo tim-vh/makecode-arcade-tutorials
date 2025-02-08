@@ -8,7 +8,7 @@ Welkom! In deze tutorial leren we je stap voor stap hoe je een leuke platform ga
 
 Gebaseerd op de video [How to Make a Platformer Game](https://www.youtube.com/watch?v=9bSX9Q5aP6E) van Microsoft MakeCode
 
-Versie: 1.12.61
+Versie: 1.0
 
 
 ## Achtergrond kleur instellen

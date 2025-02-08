@@ -53,7 +53,7 @@ hint~
 
 Voeg de code ``speler = sprites.create(img(""""""), SpriteKind.player)`` toe. Er verschijn nu een teken icoontje voor deze regel code. Door hier op te klikken kun je gemakkelijjk een sprite tekenen of kiezen uit de gallery.
 
-Om de speler te laten beweren kunnen we de volgende code gebruiken ``speler = sprites.create(img(""""""), SpriteKind.player)``
+Om de speler te laten beweren kunnen we de volgende code gebruiken ``controller.move_sprite(speler)``
 
 ```python
 scene.set_background_color(9)

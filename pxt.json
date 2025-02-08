@@ -11,7 +11,7 @@
         "assets.json",
         "docs/jingle-bells.md",
         "docs/platform-game.md",
-        "platform-game-python.md"
+        "docs/platform-game-python.md"
     ],
     "testFiles": [
         "test.ts"
